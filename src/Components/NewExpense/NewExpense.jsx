@@ -1,4 +1,5 @@
 import React from 'react'
+import { Add } from './Add'
 import ExpenseForm from './ExpenseForm'
 import  './NewExpense.css'
 
@@ -12,9 +13,12 @@ const NewExpense = (props) => {
     props.onAddExpense(expenseData)
   }
   return (
+    <>
+    <Add onsaveExpenseData={saveExpenseData}/>
     <div className='new-expense'>
 <ExpenseForm  onSaveExpenseData={saveExpenseData}/>
     </div>
+    </>
   )
 }
 
